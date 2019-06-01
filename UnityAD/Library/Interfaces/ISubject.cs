@@ -1,6 +1,9 @@
-﻿public interface ISubject
+﻿namespace UnityAD
 {
-	void Subscribe<T>(T item);
-	void UnSubscribe<T>(T item);
+    public interface ISubject
+    {
+        void Subscribe<T>(T item);
+        void UnSubscribe<T>(T item);
+    }
 }
 

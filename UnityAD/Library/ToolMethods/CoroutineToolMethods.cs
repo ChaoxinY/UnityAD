@@ -2,16 +2,20 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class CoroutineToolMethods : MonoBehaviour
+
+namespace UnityAD
 {
-	public  IEnumerator AsyncLoadScene(string sceneName)
+    public class CoroutineToolMethods : MonoBehaviour
     {
-        Debug.Log("Called "+ sceneName);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
-        // Wait until the asynchronous scene fully loads
-        while (!asyncLoad.isDone)
+        public IEnumerator AsyncLoadScene(string sceneName)
         {
-            yield return null;
+            Debug.Log("Called " + sceneName);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+            // Wait until the asynchronous scene fully loads
+            while (!asyncLoad.isDone)
+            {
+                yield return null;
+            }
         }
     }
 }

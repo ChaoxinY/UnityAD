@@ -1,5 +1,8 @@
-﻿public interface IEventHandler
+﻿namespace UnityAD
 {
-	void SubscribeEvent();
-	void UnsubscribeEvent();
+    public interface IEventHandler
+    {
+        void SubscribeEvent();
+        void UnsubscribeEvent();
+    }
 }

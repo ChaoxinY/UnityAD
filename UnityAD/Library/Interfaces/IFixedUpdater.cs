@@ -1,4 +1,7 @@
-﻿public interface IFixedUpdater
+﻿namespace UnityAD
 {
-    void FixedUpdateComponent();   
+    public interface IFixedUpdater
+    {
+        void FixedUpdateComponent();
+    }
 }

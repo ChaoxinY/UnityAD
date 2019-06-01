@@ -1,4 +1,7 @@
-﻿public interface IEventPublisher
+﻿namespace UnityAD
 {
-	void UnSubscribeFromSubject();
+    public interface IEventPublisher
+    {
+        void UnSubscribeFromSubject();
+    }
 }

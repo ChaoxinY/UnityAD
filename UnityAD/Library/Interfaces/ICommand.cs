@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-public interface ICommand 
+namespace UnityAD
 {
-    void Execute(GameObject actor);
+    public interface ICommand
+    {
+        void Execute(GameObject actor);
+    }
 }

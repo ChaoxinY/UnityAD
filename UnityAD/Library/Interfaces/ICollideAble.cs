@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
 //Using interface makes the classes implementing it more predictable
-public interface ICollideAble
+namespace UnityAD
 {
-    void ReactToCollision(Collision collision);
+    public interface ICollideAble
+    {
+        void ReactToCollision(Collision collision);
+    }
 }

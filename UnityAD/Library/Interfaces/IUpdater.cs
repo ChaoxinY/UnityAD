@@ -1,4 +1,7 @@
-﻿public interface IUpdater 
+﻿namespace UnityAD
 {
-    void UpdateComponent();
+    public interface IUpdater
+    {
+        void UpdateComponent();
+    }
 }
