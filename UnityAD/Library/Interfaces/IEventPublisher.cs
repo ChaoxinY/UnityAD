@@ -1,4 +1,4 @@
-﻿namespace UnityAD
+﻿ namespace UnityAD
 {
     public interface IEventPublisher
     {
