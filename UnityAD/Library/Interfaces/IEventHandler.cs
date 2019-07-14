@@ -2,7 +2,6 @@
 {
     public interface IEventHandler
     {
-        void SubscribeEvent();
-        void UnsubscribeEvent();
-    }
+		void SubscribeEvent(object eventPublisher, PublisherSubscribedEventArgs publisherSubscribedEventArgs);
+	}
 }

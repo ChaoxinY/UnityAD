@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UnityAD</RootNamespace>
     <AssemblyName>UnityAD</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -42,9 +42,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEditor">
-      <HintPath>.\UnityEditor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>.\UnityEngine.dll</HintPath>
     </Reference>
@@ -59,8 +56,6 @@
     <Compile Include="Library\Interfaces\IEventHandler.cs" />
     <Compile Include="Library\Interfaces\IEventPublisher.cs" />
     <Compile Include="Library\Interfaces\IFactory.cs" />
-    <Compile Include="Library\Interfaces\IFixedUpdater.cs" />
-    <Compile Include="Library\ToolMethods\InputToolMethods.cs" />
     <Compile Include="Library\Interfaces\ISubject.cs" />
     <Compile Include="Library\Interfaces\IUpdater.cs" />
     <Compile Include="Library\ToolMethods\SystemToolMethods.cs" />

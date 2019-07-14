@@ -1,17 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections.Generic;
 
 namespace UnityAD
 {
-    public class EventSubject : MonoBehaviour, ISubject
+    public class EventSubject : ISubject
     {
-        public List<IEventPublisher> EventPublishers { get; set; } = new List<IEventPublisher>();
+		public event EventHandler<PublisherSubscribedEventArgs> PublisherSubscribed;
+		public List<IEventPublisher> EventPublishers = new List<IEventPublisher>();
 
         public void Subscribe <IEventPublisher>(IEventPublisher item)
         {
             if (item is UnityAD.IEventPublisher eventPublisher)
             {
                 EventPublishers.Add(eventPublisher);
+				PublisherSubscribed(this, new PublisherSubscribedEventArgs(eventPublisher));
             }
             else
             {
@@ -30,4 +33,13 @@ namespace UnityAD
             }
         }
     }
+
+	public class PublisherSubscribedEventArgs : EventArgs
+	{
+		public IEventPublisher Publisher;
+		public PublisherSubscribedEventArgs(IEventPublisher publisher)
+		{
+			Publisher = publisher;
+		}
+	}
 }
