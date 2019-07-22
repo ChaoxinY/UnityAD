@@ -5,6 +5,6 @@ namespace UnityAD
 {
     public interface ICollideAble
     {
-        void ReactToCollision(Collision collision);
+        void ReactToCollision(GameObject gameObject, Collision collision);
     }
 }

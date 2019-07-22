@@ -5,7 +5,7 @@ using System.Collections;
 
 namespace UnityAD
 {
-    public class CoroutineToolMethods : MonoBehaviour
+    public class CoroutineToolMethods
     {
         public IEnumerator AsyncLoadScene(string sceneName)
         {
