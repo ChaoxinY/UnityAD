@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Linq;
 using UnityEngine;
 
 namespace UnityAD
@@ -58,13 +59,19 @@ namespace UnityAD
             }
         }
 
-        /// <summary>
-        /// Look for object type in transform type. 
-        /// </summary>
-        /// <param name="transform">Parent transform</param>
-        /// <param name="objecTypeTocheck">Type To search</param>
-        /// <param name="resultList">List to store</param>
-        public void TransformRecursionSearch<T>(Transform transform, List<T> resultList)
+		public int GenerateRandomIEnumerablePosition<T>(IEnumerable<T> IEnumerable)
+		{
+			int value = UnityEngine.Random.Range(0, IEnumerable.Count());
+			return value;
+		}
+
+		/// <summary>
+		/// Look for object type in transform type. 
+		/// </summary>
+		/// <param name="transform">Parent transform</param>
+		/// <param name="objecTypeTocheck">Type To search</param>
+		/// <param name="resultList">List to store</param>
+		public void TransformRecursionSearch<T>(Transform transform, List<T> resultList)
         {
             if (transform.childCount > 0)
             {

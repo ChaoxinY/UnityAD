@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Library\Interfaces\IFixedUpdater.cs" />
     <Compile Include="Library\ToolMethods\CoroutineToolMethods.cs" />
     <Compile Include="Library\Interfaces\ICollideAble.cs" />
     <Compile Include="Library\Interfaces\ICommand.cs" />
