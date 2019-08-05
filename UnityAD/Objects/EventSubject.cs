@@ -6,8 +6,11 @@ namespace UnityAD
 {
     public class EventSubject : ISubject
     {
+		//IEventhandlers should subscribe to this event first during the awake phase. If a IEventPublisher subscribes to this subject during the start phase, 
+		//The IEventhandlers will be notified via this event. 
 		public event EventHandler<PublisherSubscribedEventArgs> PublisherSubscribed;
-		public List<IEventPublisher> EventPublishers = new List<IEventPublisher>();
+
+		public List<IEventPublisher> EventPublishers { get; private set; } = new List<IEventPublisher>();
 
         public void Subscribe <IEventPublisher>(IEventPublisher item)
         {
