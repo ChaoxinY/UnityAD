@@ -56,10 +56,14 @@
     <Compile Include="Library\Interfaces\ICommand.cs" />
     <Compile Include="Library\Interfaces\IEventHandler.cs" />
     <Compile Include="Library\Interfaces\IEventPublisher.cs" />
-    <Compile Include="Library\Interfaces\IFactory.cs" />
     <Compile Include="Library\Interfaces\ISubject.cs" />
     <Compile Include="Library\Interfaces\IUpdater.cs" />
+    <Compile Include="Library\ToolMethods\Debugger.cs" />
+    <Compile Include="Library\ToolMethods\FeedBackToolMethods.cs" />
+    <Compile Include="Library\ToolMethods\PathFindingAlgorithms.cs" />
+    <Compile Include="Library\ToolMethods\RigidBodyToolMethods.cs" />
     <Compile Include="Library\ToolMethods\SystemToolMethods.cs" />
+    <Compile Include="Library\ToolMethods\UitilityMethods.cs" />
     <Compile Include="Library\ToolMethods\UIToolMethods.cs" />
     <Compile Include="Objects\EventSubject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

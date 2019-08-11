@@ -4,7 +4,16 @@ using System.Collections.Generic;
 
 namespace UnityAD
 {
-    public class EventSubject : ISubject
+	public class PublisherSubscribedEventArgs : EventArgs
+	{
+		public IEventPublisher Publisher;
+		public PublisherSubscribedEventArgs(IEventPublisher publisher)
+		{
+			Publisher = publisher;
+		}
+	}
+
+	public class EventSubject : ISubject
     {
 		//IEventhandlers should subscribe to this event first during the awake phase. If a IEventPublisher subscribes to this subject during the start phase, 
 		//The IEventhandlers will be notified via this event. 
@@ -36,13 +45,4 @@ namespace UnityAD
             }
         }
     }
-
-	public class PublisherSubscribedEventArgs : EventArgs
-	{
-		public IEventPublisher Publisher;
-		public PublisherSubscribedEventArgs(IEventPublisher publisher)
-		{
-			Publisher = publisher;
-		}
-	}
 }

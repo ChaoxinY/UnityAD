@@ -6,22 +6,22 @@ using UnityEngine;
 
 namespace UnityAD
 {
-    public class SystemToolMethods
+    public static class SystemToolMethods
     {
-        public object ReturnObjectComponent(object referenceObject, PropertyInfo propertyInfo, string name)
+        public static object ReturnObjectComponent(object referenceObject, PropertyInfo propertyInfo, string name)
         {
             object referenceObjectComponent = propertyInfo.GetValue(referenceObject, null);
             return referenceObjectComponent;
         }
 
-        public PropertyInfo ReturnPropertyInfo(object referenceObject, string name)
+        public static PropertyInfo ReturnPropertyInfo(object referenceObject, string name)
         {
             Type classType = referenceObject.GetType();
             PropertyInfo propertyInfo = classType.GetProperty(name);
             return propertyInfo;
         }
 
-        public bool CheckIfPropertyExsists(object referenceObject, string name)
+        public static bool CheckIfPropertyExsists(object referenceObject, string name)
         {
             bool propertyExsists = false;
             Type classType = referenceObject.GetType();
@@ -32,7 +32,7 @@ namespace UnityAD
             return propertyExsists;
         }
 
-        public List<object> ReturnObjectPointers(object referenceObject, List<string> requirementPointerNames)
+        public static List<object> ReturnObjectPointers(object referenceObject, List<string> requirementPointerNames)
         {
             List<object> pointers = new List<object>();
             foreach (string requirementName in requirementPointerNames)
@@ -51,7 +51,7 @@ namespace UnityAD
             return pointers;
         }
 
-        public void UpdateIUpdaters(List<IUpdater> updaters)
+        public static void UpdateIUpdaters(List<IUpdater> updaters)
         {
             foreach (IUpdater updater in updaters)
             {
@@ -59,7 +59,7 @@ namespace UnityAD
             }
         }
 
-		public int GenerateRandomIEnumerablePosition<T>(IEnumerable<T> IEnumerable)
+		public static int GenerateRandomIEnumerablePosition<T>(IEnumerable<T> IEnumerable)
 		{
 			int value = UnityEngine.Random.Range(0, IEnumerable.Count());
 			return value;
@@ -71,7 +71,7 @@ namespace UnityAD
 		/// <param name="transform">Parent transform</param>
 		/// <param name="objecTypeTocheck">Type To search</param>
 		/// <param name="resultList">List to store</param>
-		public void TransformRecursionSearch<T>(Transform transform, List<T> resultList)
+		public static void TransformRecursionSearch<T>(Transform transform, List<T> resultList)
         {
             if (transform.childCount > 0)
             {

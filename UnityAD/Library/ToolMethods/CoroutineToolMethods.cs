@@ -2,14 +2,12 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-
 namespace UnityAD
 {
-    public class CoroutineToolMethods
+    public static class CoroutineToolMethods
     {
-        public IEnumerator AsyncLoadScene(string sceneName)
+        public static IEnumerator AsyncLoadScene(string sceneName)
         {
-            Debug.Log("Called " + sceneName);
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
             // Wait until the asynchronous scene fully loads
             while (!asyncLoad.isDone)
