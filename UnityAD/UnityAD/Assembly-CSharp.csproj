@@ -60,6 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Objects\OnDeathTrigger.cs" />
+    <Compile Include="Assets\Scripts\Objects\SelfDestructor.cs" />
     <Compile Include="Assets\Scripts\Templates\EventDrivenProjectSetup\IEventHandlerTemplate.cs" />
     <Compile Include="Assets\Scripts\Templates\EventDrivenProjectSetup\IEventPublisherTemplate.cs" />
     <Compile Include="Assets\Scripts\Templates\EventDrivenProjectSetup\StaticReferences.cs" />
@@ -279,6 +281,9 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.4f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityAD">
+      <HintPath>D:/Projects/UnityAD/UnityAD/UnityAD/Assets/Lib/UnityAD.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>D:/Projects/UnityAD/UnityAD/UnityAD/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -287,9 +292,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>D:/Projects/UnityAD/UnityAD/UnityAD/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityAD">
-      <HintPath>D:/Projects/UnityAD/UnityAD/UnityAD/Assets/Lib/UnityAD.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
